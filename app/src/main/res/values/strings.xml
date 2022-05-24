@@ -9,4 +9,6 @@
     <string name="welcome">Selamat datang di aplikasi OBAT.KU \nSilahkan klik button di bawah untuk melihat list obat</string>
     <string name="cari_obat">Cari Obat</string>
     <string name="action_switch_layout">Switch Layout</string>
+    <string name="no_data">Belum ada data...</string>
+    <string name="history">history</string>
 </resources>

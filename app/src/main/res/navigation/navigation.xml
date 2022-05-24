@@ -13,12 +13,17 @@
         <action
             android:id="@+id/action_obatFragment_to_aboutAppFragment"
             app:destination="@id/aboutAppFragment" />
+        <action
+            android:id="@+id/action_obatFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/aboutAppFragment"
         android:name="org.d3if2082.task_projecta.ui.AboutAppFragment"
         android:label="AboutAppFragment"
         tools:layout="@layout/fragment_aboutapp"/>
+
     <fragment
         android:id="@+id/mainMenu"
         android:name="org.d3if2082.task_projecta.ui.MainMenu"
@@ -30,4 +35,10 @@
             android:id="@+id/action_mainMenu_to_aboutAppFragment"
             app:destination="@id/aboutAppFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="org.d3if2082.task_projecta.ui.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history"/>
 </navigation>
