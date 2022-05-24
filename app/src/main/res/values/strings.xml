@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OBAT.KU</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="copyrights">OBAT.KU Adalah Aplikasi yang digunakan untuk
+    mencari info/keterangan mengenai obat terkait.
+        \n\nCopyright  © 2021 Agung Setyo. All rights reserved.</string>
+    <string name="load_message">Memuat data %1$s (Work in progress)</string>
+    <string name="welcome">Selamat datang di aplikasi OBAT.KU \nSilahkan klik button di bawah untuk melihat list obat</string>
+    <string name="cari_obat">Cari Obat</string>
+</resources>
