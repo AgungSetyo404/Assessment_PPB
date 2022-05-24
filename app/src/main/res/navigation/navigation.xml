@@ -17,7 +17,8 @@
     <fragment
         android:id="@+id/aboutAppFragment"
         android:name="org.d3if2082.task_projecta.ui.AboutAppFragment"
-        android:label="AboutAppFragment" />
+        android:label="AboutAppFragment"
+        tools:layout="@layout/fragment_aboutapp"/>
     <fragment
         android:id="@+id/mainMenu"
         android:name="org.d3if2082.task_projecta.ui.MainMenu"
@@ -25,5 +26,8 @@
         <action
             android:id="@+id/action_mainMenu_to_obatFragment"
             app:destination="@id/obatFragment" />
+        <action
+            android:id="@+id/action_mainMenu_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
     </fragment>
 </navigation>

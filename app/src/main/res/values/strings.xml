@@ -8,4 +8,5 @@
     <string name="load_message">Memuat data %1$s (Work in progress)</string>
     <string name="welcome">Selamat datang di aplikasi OBAT.KU \nSilahkan klik button di bawah untuk melihat list obat</string>
     <string name="cari_obat">Cari Obat</string>
+    <string name="action_switch_layout">Switch Layout</string>
 </resources>
