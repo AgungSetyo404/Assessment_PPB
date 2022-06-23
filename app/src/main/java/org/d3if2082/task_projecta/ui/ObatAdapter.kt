@@ -11,6 +11,8 @@ import org.d3if2082.task_projecta.databinding.ListObatBinding
 import org.d3if2082.task_projecta.models.Obat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import com.bumptech.glide.Glide
+import org.d3if2082.task_projecta.network.ObatApi
 
 class ObatAdapter: RecyclerView.Adapter<ObatAdapter.ViewHolder>() {
 
@@ -25,7 +27,10 @@ class ObatAdapter: RecyclerView.Adapter<ObatAdapter.ViewHolder>() {
     class ViewHolder(private val binding: ListObatBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(obat: Obat) = with(binding){
             namaObat.text = obat.namaObat
-            imageView.setImageResource(obat.imageid)
+            Glide.with(imageView.context)
+                .load(ObatApi.getObatURL(obat.imageid))
+                .error(R.drawable.ic_baseline_broken_image_24)
+                .into(binding.imageView)
 
             root.setOnClickListener {
                 val message = root.context.getString(R.string.load_message, obat.namaObat)
