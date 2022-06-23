@@ -1,12 +1,14 @@
 package org.d3if2082.task_projecta.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import org.d3if2082.task_projecta.R
 import org.d3if2082.task_projecta.databinding.FragmentMainmenuBinding
+import org.d3if2082.task_projecta.util.Timer
 
 class MainMenu : Fragment(R.layout.fragment_mainmenu) {
 

@@ -1,6 +1,7 @@
 package org.d3if2082.task_projecta.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -17,10 +18,10 @@ import org.d3if2082.task_projecta.R
 //import org.d3if2082.task_projecta.data.SettingDataStore
 //import org.d3if2082.task_projecta.data.dataStore
 import org.d3if2082.task_projecta.databinding.FragmentObatBinding
+import org.d3if2082.task_projecta.util.Timer
 
 class ObatFragment : Fragment() {
 
-    // TODO: Rename and change types of parameters
     private lateinit var binding: FragmentObatBinding
     private lateinit var myAdapter: ObatAdapter
     private var isLinearLayoutManager = true
@@ -29,15 +30,6 @@ class ObatFragment : Fragment() {
     private val viewModel: ObatViewModel by lazy {
         ViewModelProvider(requireActivity())[ObatViewModel::class.java]
     }
-
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        arguments?.let {
-//            param1 = it.getString(ARG_PARAM1)
-//            param2 = it.getString(ARG_PARAM2)
-//        }
-//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
