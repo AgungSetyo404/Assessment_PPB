@@ -11,4 +11,5 @@
     <string name="action_switch_layout">Switch Layout</string>
     <string name="no_data">Belum ada data...</string>
     <string name="history">history</string>
+    <string name="networkError">Connection Error</string>
 </resources>

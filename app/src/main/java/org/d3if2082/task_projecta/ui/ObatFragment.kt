@@ -18,6 +18,7 @@ import org.d3if2082.task_projecta.R
 //import org.d3if2082.task_projecta.data.SettingDataStore
 //import org.d3if2082.task_projecta.data.dataStore
 import org.d3if2082.task_projecta.databinding.FragmentObatBinding
+import org.d3if2082.task_projecta.network.ApiStat
 import org.d3if2082.task_projecta.util.Timer
 
 class ObatFragment : Fragment() {
@@ -61,6 +62,22 @@ class ObatFragment : Fragment() {
         viewModel.getData().observe(viewLifecycleOwner, {
             myAdapter.updateData(it)
         })
+        viewModel.getStatus().observe(viewLifecycleOwner, {
+            updateProgress(it)
+        })
+        viewModel.scheduleUpdater(requireActivity().application)
+    }
+
+    private fun updateProgress(status: ApiStat) {
+        when (status) {
+            ApiStat.Loading -> {binding.progressBar.visibility = View.VISIBLE}
+            ApiStat.Success -> {binding.progressBar.visibility = View.GONE}
+            ApiStat.Failed -> {
+                binding.progressBar.visibility = View.GONE
+                binding.networkErr.visibility = View.VISIBLE
+
+            }
+        }
     }
 
     private fun chooseLayout() {

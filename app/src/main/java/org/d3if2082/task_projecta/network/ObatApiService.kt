@@ -31,3 +31,5 @@ object ObatApi {
         return "$BASE_URL$namaObat.png"
     }
 }
+
+enum class ApiStat {Loading, Success, Failed}
