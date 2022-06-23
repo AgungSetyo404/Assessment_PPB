@@ -11,14 +11,11 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import org.d3if2082.task_projecta.R
-import org.d3if2082.task_projecta.db.ObatDao
-import org.d3if2082.task_projecta.db.ObatEntity
+import org.d3if2082.task_projecta.MainActivity
 import org.d3if2082.task_projecta.models.Obat
 import org.d3if2082.task_projecta.network.ApiStat
 import org.d3if2082.task_projecta.network.ObatApi
-import org.d3if2082.task_projecta.network.UpdateWorker
+import org.d3if2082.task_projecta.network.CustomWorker
 import java.util.concurrent.TimeUnit
 
 //(private val db: ObatDao)
@@ -78,12 +75,12 @@ class ObatViewModel : ViewModel() {
     fun getStatus(): LiveData<ApiStat> = status
 
     fun scheduleUpdater(app:Application) {
-        val request = OneTimeWorkRequestBuilder<UpdateWorker>()
+        val request = OneTimeWorkRequestBuilder<CustomWorker>()
             .setInitialDelay(30000, TimeUnit.MILLISECONDS)
             .build()
 
         WorkManager.getInstance(app).enqueueUniqueWork(
-            "updater",
+            MainActivity.CHANNEL_ID,
             ExistingWorkPolicy.REPLACE,
             request
         )

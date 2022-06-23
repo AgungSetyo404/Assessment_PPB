@@ -12,4 +12,8 @@
     <string name="no_data">Belum ada data...</string>
     <string name="history">history</string>
     <string name="networkError">Connection Error</string>
+    <string name="channel_name">Custom</string>
+    <string name="channel_desc">Rate App, new Content, and Others</string>
+    <string name="notif_title">Telusuri lebih lanjut mengenai obat</string>
+    <string name="notif_text">Temukan informasi mengenai obat yang sedang anda butuhkan...!</string>
 </resources>
